@@ -1,21 +1,7 @@
-terraform {
-
-  # cloud block is used to configure the Terraform Cloud settings for the configuration file to be uploaded to the Terraform Cloud workspace
-  cloud {
-    organization = "ModaWithOrganization"
-
-    workspaces {
-      name = "iac-aws-with-terraform"
-    }
-  }
-
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 4.16"
-    }
-  }
-  required_version = ">= 1.2.0"
+provider "aws" {
+  region     = "ap-southeast-1"
+  access_key = var.access_key
+  secret_key = var.secret_key
 }
 
 resource "aws_instance" "app_server" {
