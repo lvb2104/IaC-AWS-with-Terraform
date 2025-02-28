@@ -1,12 +1,4 @@
 terraform {
-  cloud {
-    organization = "ModaWithOrganization"
-
-    workspaces {
-      name = "iac-aws-with-terraform"
-    }
-  }
-
   required_providers {
     aws = {
       source  = "hashicorp/aws"

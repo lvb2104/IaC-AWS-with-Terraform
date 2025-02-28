@@ -4,16 +4,6 @@ variable "instance_name" {
   default     = "DefaultInstanceName"
 }
 
-variable "access_key" {
-  description = "AWS access key"
-  type        = string
-}
-
-variable "secret_key" {
-  description = "AWS secret key"
-  type        = string
-}
-
 variable "ami" {
   description = "AMI for EC2"
   type        = string
@@ -34,6 +24,12 @@ variable "key_name" {
 
 variable "security_groups" {
   description = "Security groups for EC2 instance"
+  type        = list(string)
+  default     = ["launch-wizard-1"]
+}
+
+variable "region" {
+  description = "The AWS region to deploy resources in"
   type        = string
-  default     = "launch-wizard-1"
+  default     = "ap-southeast-1"
 }
