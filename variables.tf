@@ -28,7 +28,7 @@ variable "security_groups_module" {
   default     = ["launch-wizard-1"]
 }
 
-variable "region_module" {
+variable "region" {
   description = "The AWS region to deploy resources in"
   type        = string
   default     = "ap-southeast-1"
