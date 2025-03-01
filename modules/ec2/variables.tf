@@ -27,9 +27,3 @@ variable "security_groups" {
   type        = list(string)
   default     = ["launch-wizard-1"]
 }
-
-variable "region" {
-  description = "The AWS region to deploy resources in"
-  type        = string
-  default     = "ap-southeast-1"
-}
