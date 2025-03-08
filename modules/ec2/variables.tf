@@ -7,7 +7,7 @@ variable "instance_name" {
 variable "ami" {
   description = "AMI for EC2"
   type        = string
-  default     = "ami-0672fd5b9210aa093"
+  default     = "ami-04b4f1a9cf54c11d0"
 }
 
 variable "instance_type" {
@@ -19,11 +19,11 @@ variable "instance_type" {
 variable "key_name" {
   description = "Key for accessing EC2 instance"
   type        = string
-  default     = "EC2KeyPair"
+  default     = "MyKeyPairToPractice"
 }
 
 variable "security_groups" {
   description = "Security groups for EC2 instance"
   type        = list(string)
-  default     = ["launch-wizard-1"]
+  default     = ["default"]
 }
